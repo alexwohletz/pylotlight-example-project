@@ -1,6 +1,0 @@
-sources:
-  - name: file_source
-    tables:
-      - name: iris_data
-        config:
-          external_location: "dbt/pylotlight/data/IRIS.csv"
