@@ -1,21 +1,27 @@
-
 version: 2
 
 models:
-  - name: my_first_dbt_model
-    description: "A starter dbt model"
+  - name: base_data
     columns:
-      - name: id
-        description: "The primary key for this table"
-        data_tests:
-          - unique
+      - name: sepal_length
+        tests:
           - not_null
+      - name: sepal_width
+        tests:
+          - not_null
+      - name: petal_length
+        tests:
+          - not_null
+      - name: petal_width
+        tests:
+          - not_null
+      - name: species
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['setosa', 'versicolor', 'virginica']
 
-  - name: my_second_dbt_model
-    description: "A starter dbt model"
-    columns:
-      - name: id
-        description: "The primary key for this table"
-        data_tests:
-          - unique
-          - not_null
+    tests:
+      - unique:
+          column_name: "CONCAT(sepal_length, sepal_width, petal_length, petal_width)"
+          where: "species = 'setosa'"
