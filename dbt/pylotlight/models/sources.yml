@@ -1,0 +1,19 @@
+version: 2
+
+sources:
+  - name: file_source
+    tables:
+      - name: iris_data
+        meta:
+          external_location: "data/IRIS.csv"
+        columns:
+          - name: sepal_length
+            data_type: float
+          - name: sepal_width
+            data_type: float
+          - name: petal_length
+            data_type: float
+          - name: petal_width
+            data_type: float
+          - name: species
+            data_type: varchar
