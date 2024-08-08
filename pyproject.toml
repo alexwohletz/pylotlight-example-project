@@ -8,9 +8,10 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.10"
-dbt = "^1.0.0.38.7"
 dbt-core = "^1.8.5"
 dbt-postgres = "^1.8.2"
+astronomer-cosmos = "^1.5.1"
+dbt-duckdb = "^1.8.2"
 
 [tool.poetry.group.dev.dependencies]
 black = "^24.8.0"
