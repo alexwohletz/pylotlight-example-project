@@ -3,4 +3,4 @@ default:
   outputs:
     dev:
       type: duckdb
-      path: dbt.duckdb
+      path: "data/dbt.duckdb"

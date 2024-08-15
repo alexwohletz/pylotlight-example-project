@@ -127,6 +127,9 @@ services:
       <<: *airflow-common-depends-on
       airflow-init:
         condition: service_completed_successfully
+    networks:
+         - airflow-pylotlight
+         - default
 
   airflow-scheduler:
     <<: *airflow-common
@@ -142,6 +145,9 @@ services:
       <<: *airflow-common-depends-on
       airflow-init:
         condition: service_completed_successfully
+    networks:
+         - airflow-pylotlight
+         - default
 
   airflow-worker:
     <<: *airflow-common
@@ -282,3 +288,7 @@ services:
 
 volumes:
   postgres-db-volume:
+
+networks:
+  airflow-pylotlight:
+    external: true

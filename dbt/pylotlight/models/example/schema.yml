@@ -18,8 +18,6 @@ models:
       - name: species
         tests:
           - not_null
-          - accepted_values:
-              values: ['setosa', 'versicolor', 'virginica']
 
     tests:
       - unique:

@@ -9,6 +9,7 @@ profile_config = ProfileConfig(
 my_cosmos_dag = DbtDag(
     project_config=ProjectConfig(
         f"{os.environ['AIRFLOW_HOME']}/dbt/pylotlight",
+        env_vars={"DBT_LOG_FORMAT_FILE": "json"}
     ),
     profile_config=profile_config,
     execution_config=ExecutionConfig(
