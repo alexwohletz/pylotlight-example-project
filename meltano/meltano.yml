@@ -1,0 +1,10 @@
+version: 1
+project_id: your-project-id
+send_anonymous_usage_stats: false
+
+plugins:
+  extractors: []
+  loaders: []
+  transformers: []
+  orchestrators: []
+  utilities: []
