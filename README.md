@@ -17,7 +17,7 @@ A demonstration of Apache Airflow, dbt, Cosmos, and duckDb as a modern analytics
 **Installation:**
 
 1. Clone the repository using `git clone https://github.com/alexwohletz/pylotlight-example-project`
-2. Run the project using `docker-compose up`
+2. Run the project using `make build-airflow` and then `make run-airflow`
 
 **Usage:**
 
